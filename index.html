@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello User</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #greeting {
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="greeting"></h1>
+    </div>
+
+    <script>
+        // Function to get query parameters from URL
+        function getQueryParam(param) {
+            let result = new URLSearchParams(window.location.search).get(param);
+            return result;
+        }
+
+        // Get 'id' query parameter
+        let user = getQueryParam('id');
+
+        // Display greeting message
+        document.getElementById('greeting').textContent = 'Hello ' + user;
+    </script>
+</body>
+</html>
