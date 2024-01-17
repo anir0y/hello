@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello User</title>
+    <title>Lading Page</title>
     <style>
         body {
-            background-color: #f0f0f0;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
             font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
         .container {
             max-width: 600px;
-            margin: 0 auto;
             padding: 20px;
         }
         #greeting {
-            color: #333;
+            color: #ddd;
             border: 1px solid #ddd;
             padding: 20px;
             text-align: center;
             border-radius: 10px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 15px #00ffea, 0 0 20px #00ffea;
+            }
+            to {
+                box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #00ffea, 0 0 40px #00ffea;
+            }
         }
     </style>
 </head>
